@@ -1,4 +1,4 @@
-package ca.khietvan.com.interfaces;
+package khietvan.interfaces;
 
 public interface IDeviceOperable {
     String operatingInstructions();
