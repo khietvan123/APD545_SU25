@@ -12,6 +12,6 @@ public class SmartSpeaker extends UtilityDevices {
 
     @Override
     public String operatingInstructions(){
-        return "";
+        return "By using voice commands";
     }
 }

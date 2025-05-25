@@ -25,20 +25,23 @@ public class DeviceController {
     }
 
     //Requirement 2
-    public ElectronicDevice mostExpensiveDevice(){
-        int index = 1;
+    public ElectronicDevice mostExpensiveDevice() {
+        if (m_devices == null || m_devices.length == 0) {
+            return null; // or throw an exception if appropriate
+        }
+
         int resultIndex = 0;
-        for(int i = 0 ; i < m_devices.length;i++){
-            if(m_devices[i].getCost() > m_devices[index++].getCost()){ //checking through all element, find the largest
+
+        for (int i = 1; i < m_devices.length; i++) {
+            if (m_devices[i].getCost() > m_devices[resultIndex].getCost()) {
                 resultIndex = i;
-                if(index==m_devices.length){
-                    index--; //prevent index goes up too much
-                }
             }
         }
-        System.out.println("The most expensive device is: "+m_devices[resultIndex].getName());
+
+        System.out.println("The most expensive device is: " + m_devices[resultIndex].getName());
         return m_devices[resultIndex];
     }
+
 
 
 
