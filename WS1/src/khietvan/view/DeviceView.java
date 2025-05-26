@@ -49,6 +49,7 @@ public class DeviceView {
         printDevice((m_controller.mostExpensiveDevice()));
 
         System.out.println("--:Requirement 3:--");
+        System.out.println("Devices in Descending Order of Price:");
         m_controller.sortPriceAndPrint();
 
         System.out.println("--:Requirement 4:--");

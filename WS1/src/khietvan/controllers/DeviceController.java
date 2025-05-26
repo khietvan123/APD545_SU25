@@ -33,7 +33,6 @@ public class DeviceController {
                 new SmartTV(getPrice(sc, "SmartTV")),
                 new SmartSpeaker(getPrice(sc, "SmartSpeaker"))
         };
-
         System.out.println(); // new line
     }
 

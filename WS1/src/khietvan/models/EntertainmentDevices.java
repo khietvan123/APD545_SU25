@@ -20,5 +20,4 @@ public abstract class EntertainmentDevices extends ElectronicDevice implements I
         super(name, cost, functionType, functionality);
     }
 
-
 }
