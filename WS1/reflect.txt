@@ -1,0 +1,20 @@
+/**********************************************
+ Workshop #1
+ Course:        APD545 - SU25
+ Last Name:     Phan
+ First Name:    Khiet Van
+ ID:            147072235
+ Section:       NAA
+ This assignment represents my own work in accordance with Seneca Academic Policy.
+ Khiet Van Phan
+ Date:          May 25th,2025
+ **********************************************/
+Using the Model-View-Controller (MVC) design pattern significantly improved how I organized my code for Workshop 1.
+
+The Model layer helped me isolate the core data and logic of the application. I placed all the abstract classes, interfaces, and concrete device types here. This made it easy to maintain and extend the functionality of each electronic device without affecting other parts of the program.
+
+The View was responsible only for user input and output. By keeping the UI logic separate, I avoided mixing user interaction with business logic. If I ever need to change how the output looks or replace the input mechanism, I only need to modify the View class.
+
+The Controller is like a middle layer that handles the program’s flow and logic. It received user input from the View, updated or retrieved information from the Model, and passed the results back to the View for display. This separation of responsibility helped me avoid redundant code and allowed me to easily test and update specific features in isolation.
+
+Overall, following the MVC pattern made the project modular, scalable, and much easier to understand. It gave the project a clean structure and helped me focus on one responsibility at a time in each class or package.
