@@ -1,6 +1,18 @@
+/**********************************************
+ Workshop #
+ Course:        APD545 - SU25
+ Last Name:     Phan
+ First Name:    Khiet Van
+ ID:            147072235
+ Section:       NAA
+ This assignment represents my own work in accordance with Seneca Academic Policy.
+ Khiet Van Phan
+ Date:          May 25th,2025
+ **********************************************/
+
 package khietvan.models;
 
-public abstract class ElectronicDevice {
+public abstract class ElectronicDevice implements Comparable<ElectronicDevice> {
     private String m_name;
     private double m_cost;
     private String m_functionType;
@@ -37,14 +49,12 @@ public abstract class ElectronicDevice {
     }
 
     @Override
-    public String toString() {
-        return "ElectronicDevice{" +
-                "m_name='" + m_name + '\'' +
-                ", m_cost=" + m_cost +
-                ", m_functionType='" + m_functionType + '\'' +
-                ", m_functionality='" + m_functionality + '\'' +
-                '}';
+    public String toString() { //Override just to print the name
+        return this.getName();
     }
 
-
+    @Override
+    public int compareTo(ElectronicDevice other) {
+        return Double.compare(other.getCost(), this.getCost());
+    }
 }

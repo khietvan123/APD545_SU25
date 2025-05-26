@@ -1,3 +1,15 @@
+/**********************************************
+ Workshop #
+ Course:        APD545 - SU25
+ Last Name:     Phan
+ First Name:    Khiet Van
+ ID:            147072235
+ Section:       NAA
+ This assignment represents my own work in accordance with Seneca Academic Policy.
+ Khiet Van Phan
+ Date:          May 25th,2025
+ **********************************************/
+
 package khietvan.view;
 
 import khietvan.controllers.DeviceController;
@@ -24,6 +36,7 @@ public class DeviceView {
             System.out.println(device.getName()+" maintenance: "+((IDeviceMaintainable)device).maintenanceInstructions());
         }
         System.out.println(device.getName()+" function type: "+device.getFunctionType());
+        System.out.println(); //empty line
     }
 
     public void runProgram(){
@@ -34,5 +47,14 @@ public class DeviceView {
 
         System.out.println("--:Requirement 2:--");
         printDevice((m_controller.mostExpensiveDevice()));
+
+        System.out.println("--:Requirement 3:--");
+        m_controller.sortPriceAndPrint();
+
+        System.out.println("--:Requirement 4:--");
+        System.out.print("Enter a device category (CommunicationDevices, EntertainmentDevices, UtilityDevices): ");
+        sc.nextLine();
+        m_controller.functionalityInformation(sc.nextLine());
+
     }
 }
